@@ -1,0 +1,6 @@
+%{
+  "component": {:git, "https://github.com/pragdave/component.git", "002fe7f98f02a09cf6e2252ae007bb50b416c1cc", []},
+  "dep_from_git": {:git, "https://github.com/pragdave/component.git", "002fe7f98f02a09cf6e2252ae007bb50b416c1cc", []},
+  "poolboy": {:hex, :poolboy, "1.5.2", "392b007a1693a64540cead79830443abf5762f5d30cf50bc95cb2c1aaafa006b", [:rebar3], [], "hexpm"},
+  "statix": {:hex, :statix, "1.1.0", "af9a4586c5cd58f879e0595f06a4790878715de5b8f75f6346693aaa38da2424", [:mix], [], "hexpm"},
+}
