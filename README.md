@@ -6,7 +6,7 @@ This repo contains a modification of the [Hangman game](https://github.com/pragd
 
 I've been experimenting with Dave's Component Library on a few projects which follow Dave's design approach [Splitting APIs, Servers, and Implementations in Elixir](https://pragdave.me/blog/2017/07/13/decoupling-interface-and-implementation-in-elixir.html).
 
-In this repo we want to show how we have used the component library on a simple example that illustrates some of the practises that we have found useful. To this end we have taken some of the code from Dave's `Elixir for Programmers' course and used the component library.
+In this repo I want to show how I've have used the component library on a simple example that illustrates some of the practises that I've have found useful. To this end I've have taken some of the code from Dave's `Elixir for Programmers' course and used the component library.
 
 I recommend that unless you are familiar with Dave's course or the Component library you follow the links above before before continuing, or it might not make a lot of sense.
 
@@ -92,7 +92,7 @@ defmodule Dictionary do
 end
 ```
 
-However we have found the better strategy is keep to Dave's design strategy with a separation of concerns, by creating a new file `word_list_comp.ex` for the component definition, and leaving the implementation in `word_list.ex` alone.
+However I've have found the better strategy is keep to Dave's design strategy with a separation of concerns, by creating a new file `word_list_comp.ex` for the component definition, and leaving the implementation in `word_list.ex` alone.
 
 #### word_list_comp.ex
 
@@ -249,7 +249,7 @@ end
 
 ```
 
-In this component implementation we can correct for the `make_move` function returning the state and the tally.
+In this component implementation I've corrected for the `make_move` function returning the state and the tally.
 
 The original hangman API
 
