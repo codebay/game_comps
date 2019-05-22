@@ -4,11 +4,11 @@ This repo contains a modification of the [Hangman game](https://github.com/pragd
 
 ## Why
 
-We have been experimenting with Dave's Component Library on a few internal projects which follow Dave's design approach [Splitting APIs, Servers, and Implementations in Elixir](https://pragdave.me/blog/2017/07/13/decoupling-interface-and-implementation-in-elixir.html).
+I've been experimenting with Dave's Component Library on a few projects which follow Dave's design approach [Splitting APIs, Servers, and Implementations in Elixir](https://pragdave.me/blog/2017/07/13/decoupling-interface-and-implementation-in-elixir.html).
 
 In this repo we want to show how we have used the component library on a simple example that illustrates some of the practises that we have found useful. To this end we have taken some of the code from Dave's `Elixir for Programmers' course and used the component library.
 
-I recommend that unless you are familair with Dave's course or the Component library you follow the links above before before continuing, or it might not make a lot of sense.
+I recommend that unless you are familiar with Dave's course or the Component library you follow the links above before before continuing, or it might not make a lot of sense.
 
 The Hangman game is made up of two servers: `Dictionary` which provides a random word from a word list and `Hangman` which provides the business logic of the game, and text based client `TextClient`.
 
@@ -92,7 +92,7 @@ defmodule Dictionary do
 end
 ```
 
-However we have found the better strategy is keep to Dave's design strategy with a seperation of concerns, by creating a new file `word_list_comp.ex` for the component definition, and leaving the implementation in `word_list.ex` alone.
+However we have found the better strategy is keep to Dave's design strategy with a separation of concerns, by creating a new file `word_list_comp.ex` for the component definition, and leaving the implementation in `word_list.ex` alone.
 
 #### word_list_comp.ex
 
@@ -125,7 +125,7 @@ end
 
 ## Making the Hangman into a Dynamic Component
 
-The `Hangman` directory structure is similiar to the `Dictionary` with an API, implementation code and tests.
+The `Hangman` directory structure is similar to the `Dictionary` with an API, implementation code and tests.
 
 The game logic is in the file `game.ex` in a `game` directory under `lib`
 
@@ -218,13 +218,13 @@ This time the simple approach of applying the component library to `game.ex` abo
 
 - the `make_move` function would use the `one_way` declarations because the state is changed, however currently the function returns the new state and a tally.
 
-- the `make_move` has a second problem, as one function uses pattern matching to extract the game state and the component library cannot handle this sitution.
+- the `make_move` has a second problem, as one function uses pattern matching to extract the game state and the component library cannot handle this situation.
 
 - the code in the `one_way` and `two_way` functions will execute inside there own module so direct calls to the supporting private functions will not work. Dave's offers in his [Component guide](https://github.com/pragdave/component) a solution by moving these supporting functions to one or more separate modules.
 
 However all these changes will break the unit tests, which also will need changing.
 
-As before a better stratagy is to create a new file for the component implementation, and leave the `game.ex` file alone.
+As before a better strategy is to create a new file for the component implementation, and leave the `game.ex` file alone.
 
 #### game_comp.ex
 
@@ -263,7 +263,7 @@ defmodule Hangman do
 end
 ```
 
-Will need modification because again the state is being retained within the component, and also to provide more approriate alternative names for the `create` and `distory` functions created in the component library.
+Will need modification because again the state is being retained within the component, and also to provide more appropriate alternative names for the `create` and `distory` functions created in the component library.
 
 ```
 defmodule Hangman do
@@ -309,7 +309,7 @@ Your guess:
 .....
 ```
 
-### Use the Dictionary Component seperately
+### Use the Dictionary Component separately
 
 ```
 $ cd dictionary
@@ -330,7 +330,7 @@ iex(4)> Dictionary.random_word
 .....
 ```
 
-### Use the Hangman Component seperately
+### Use the Hangman Component separately
 
 ```
 $ cd hangman

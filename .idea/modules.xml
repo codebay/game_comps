@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dictionary//dictionary.iml" filepath="$PROJECT_DIR$/dictionary//dictionary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/game_comps.iml" filepath="$PROJECT_DIR$/.idea/game_comps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hangman//hangman.iml" filepath="$PROJECT_DIR$/hangman//hangman.iml" />
+      <module fileurl="file://$PROJECT_DIR$/text_client//text_client.iml" filepath="$PROJECT_DIR$/text_client//text_client.iml" />
+    </modules>
+  </component>
+</project>
